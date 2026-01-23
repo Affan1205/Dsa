@@ -1,0 +1,33 @@
+// *****
+// *   *
+// *   *
+// *   *
+// *****
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int row = 1;
+    while (row <= n)
+    {
+        int col = 1;
+        while (col <= n)
+        {
+            if (row == 1 || col == 1 || row == n || col == n)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+            col = col + 1;
+        }
+        cout << endl;
+        row = row + 1;
+    }
+
+    return 0;
+}
