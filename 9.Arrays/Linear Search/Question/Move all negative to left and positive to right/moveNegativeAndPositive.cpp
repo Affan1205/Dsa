@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+void printVector(vector<int> arr)
+{
+    for (int i = 0; i < arr.size(); i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+void moveNegativeAndPositive(vector<int>& arr)
+{
+    int start = 0;
+    int end = arr.size() - 1;
+    while (start <= end)
+    {
+        if (arr[start] >= 0 && arr[end] < 0)
+        {
+            swap(arr[start], arr[end]);
+            start++;
+            end--;
+        }
+        else if (arr[start] < 0)
+        {
+            start++;
+        }
+        else if (arr[end] >= 0)
+        {
+            end--;
+        }
+    }
+}
+int main()
+{
+    vector<int> arr{2, 4, -4, 9, -7, 0, 6, -5};
+    moveNegativeAndPositive(arr);
+    printVector(arr);
+    return 0;
+}
