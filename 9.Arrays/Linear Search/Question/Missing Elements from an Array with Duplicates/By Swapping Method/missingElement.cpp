@@ -1,7 +1,30 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void findMissingElement(vector<int> arr)
+// void findMissingElement(vector<int> arr)
+// {
+//     int i = 0;
+//     while (i < arr.size())
+//     {
+//         int index = arr[i] - 1;
+//         if (arr[i] != arr[index])
+//         {
+//             swap(arr[i], arr[index]);
+//         }
+//         else
+//         {
+//             i++;
+//         }
+//     }
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         if (arr[i] != i + 1)
+//         {
+//             cout << i + 1 << " ";
+//         }
+//     }
+// }
+void findMissingElement(vector<int> &arr)
 {
     int i = 0;
     while (i < arr.size())
@@ -20,7 +43,7 @@ void findMissingElement(vector<int> arr)
     {
         if (arr[i] != i + 1)
         {
-            cout << i + 1 << " ";
+            cout << "Missing element is : " << i + 1;
         }
     }
 }
