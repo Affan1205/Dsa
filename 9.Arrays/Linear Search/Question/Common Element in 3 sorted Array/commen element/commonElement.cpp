@@ -3,7 +3,7 @@
 using namespace std;
 void commonElement(vector<int> arr, vector<int> brr, vector<int> crr)
 {
-    int  i = 0, j = 0, k = 0;
+    int i = 0, j = 0, k = 0;
     while (i < arr.size() && j < brr.size() && k < crr.size())
     {
         if (arr[i] == brr[j] && brr[j] == crr[k])
