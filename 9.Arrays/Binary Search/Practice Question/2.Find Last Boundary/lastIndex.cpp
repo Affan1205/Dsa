@@ -13,12 +13,11 @@ int findLastIndex(vector<int> &arr, int target)
     {
         if (arr[mid] <= target)
         {
+            /*Agar arr[mid] <= target,
+            toh left side ke saare elements bhi ≤ target honge,
+            isliye last index dhoondhne ke liye right side check karna chahiye.*/
             ans = mid;
             start = mid + 1; // we search for last index i.e arr[i]<=target
-        }
-        else if (target > arr[mid])
-        {
-            start = mid + 1;
         }
         else if (target < arr[mid])
         {

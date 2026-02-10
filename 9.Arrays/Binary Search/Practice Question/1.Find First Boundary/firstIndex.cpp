@@ -13,16 +13,15 @@ int findFirstIndex(vector<int> &arr, int target)
     {
         if (arr[mid] >= target)
         {
+            /*Agar arr[mid] >= target,
+            toh mid ke right side ke saare elements bhi ≥ target honge,
+            isliye first index dhoondhne ke liye left side check karna zaroori hai.*/
             ans = mid;
             end = mid - 1; // we search for first index i.e arr[i]>=target
         }
         else if (target > arr[mid])
         {
             start = mid + 1;
-        }
-        else if (target < arr[mid])
-        {
-            end = mid - 1;
         }
 
         mid = start + (end - start) / 2;
