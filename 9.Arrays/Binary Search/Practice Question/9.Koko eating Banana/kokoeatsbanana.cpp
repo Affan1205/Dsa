@@ -51,7 +51,7 @@ int main()
 {
     vector<int> piles{3, 6, 7, 11};
     int hours = 8;
-    int minSpeed = findMinimumEatingSpeed(piles, hours);
-    cout << "Minimum Eating Speed => " << minSpeed;
+    int minimumSpeed = findMinimumEatingSpeed(piles, hours);
+    cout << "Minimum Eating Speed => " << minimumSpeed;
     return 0;
 }
